@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="referrer" content="no-referrer">
+<title>لوحة الأمان</title>
+<link rel="stylesheet" href="/admin/app.css">
+</head>
+<body>
+<main id="login" class="wrap narrow">
+  <h1>لوحة الأمان</h1>
+  <p class="muted">الدخول بمعرّفك ومفتاحك الخاص. المفتاح يبقى في ذاكرة المتصفح فقط ولا يُرسل أبدًا، ويُمسح عند القفل.</p>
+  <label for="key-id">المعرّف</label>
+  <input id="key-id" autocomplete="off" spellcheck="false" placeholder="owner">
+  <label for="secret">المفتاح</label>
+  <input id="secret" type="password" autocomplete="off" spellcheck="false">
+  <button id="login-btn" class="primary" type="button">دخول</button>
+  <p id="msg" class="msg" role="alert"></p>
+</main>
+<main id="app" class="wrap" hidden>
+  <header class="top"><h1>لوحة الأمان</h1><span class="muted">المستخدم: <b id="who"></b></span><button id="lock-btn" type="button">قفل</button></header>
+  <h2>القواطع</h2>
+  <section id="breakers" class="grid"></section>
+  <h2>طلبات بانتظار الموافقة</h2>
+  <section id="pending" class="stack"></section>
+  <h2>الحوادث</h2>
+  <section id="incidents" class="stack"></section>
+  <h2>سجل التدقيق (آخر العمليات)</h2>
+  <section id="audit" class="stack small"></section>
+</main>
+<script src="/admin/app.js" defer></script>
+</body>
+</html>
